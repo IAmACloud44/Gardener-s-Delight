@@ -22,18 +22,12 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.SLIME_BLOCK)));
 
-    public static final DeferredBlock<SlabBlock> DIRT_SLABS = registerBlock("dirt_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .strength(2f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.GRASS)));
+    public static final DeferredBlock<StairBlock> DIRT_STAIRS = registerBlock("dirt_stairs",
+            () -> new StairBlock(Blocks.DIRT.defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.GRASS)));
 
-//    public static final DeferredBlock<StairBlock> DIRT_STAIRS = registerBlock("dirt_stair",
-//            () -> new StairBlock(Blocks.DIRT.get().defaultBlockState()
-//                    .BlockBehaviour.Properties.of()
-//                    .strength(2f)
-//                    .requiresCorrectToolForDrops()
-//                    .sound(SoundType.GRASS)));
+    public static final DeferredBlock<SlabBlock> DIRT_SLAB = registerBlock("dirt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.GRASS)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -21,7 +21,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.gardenersdelight.food"))
                     .displayItems((ItemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BUTTER_BLOCK);
-                        output.accept(ModBlocks.DIRT_SLABS);
+                        output.accept(ModBlocks.DIRT_SLAB);
+                        output.accept(ModBlocks.DIRT_STAIRS);
 
                         output.accept(ModItem.HOT_WATER_BUCKET);
 

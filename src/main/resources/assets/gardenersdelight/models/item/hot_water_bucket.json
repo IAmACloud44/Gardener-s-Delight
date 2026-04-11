@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gardenersdelight:item/hot_water_bucket"
-  }
-}
