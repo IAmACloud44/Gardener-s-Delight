@@ -1,0 +1,16 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item" : "minecraft:dirt"
+    }
+  },
+  "pattern": [
+    "XXX"
+  ],
+  "result": {
+    "count": 6,
+    "id": "gardenersdelight:dirt_slabs"
+  }
+}
