@@ -3,6 +3,10 @@ package net.iamacloud44.gardenersdelight;
 import net.iamacloud44.gardenersdelight.block.ModBlocks;
 import net.iamacloud44.gardenersdelight.item.ModCreativeModeTabs;
 import net.iamacloud44.gardenersdelight.item.ModItem;
+import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.level.GrassColor;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -14,7 +18,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -47,8 +50,11 @@ public class GardenersDelight {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
+    private void clientSetup(RegisterColorHandlersEvent.Block event) {
 
+    }
+
+    private void commonSetup(FMLCommonSetupEvent event) {
     }
 
     // Add the example block de.iamcloud44.clouddelight.item to the building blocks tab
@@ -67,11 +73,30 @@ public class GardenersDelight {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = net.iamacloud44.gardenersdelight.GardenersDelight.MOD_ID, value = Dist.CLIENT)
-    static class ClientModEvents {
-        @SubscribeEvent
-        static void onClientSetup(FMLClientSetupEvent event) {
+    @EventBusSubscriber(modid = GardenersDelight.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+    public static class ClientModEvents {
 
+        @SubscribeEvent
+        public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+            // Your existing slab registration
+            event.register(
+                    (state, level, pos, tintIndex) -> {
+                        if (tintIndex == 0) {
+                            return level != null && pos != null
+                                    ? BiomeColors.getAverageGrassColor(level, pos)
+                                    : GrassColor.getDefaultColor();
+                        }
+                        return -1;
+                    },
+                    ModBlocks.GRASS_SLAB.get()
+            );
+        }
+        @SubscribeEvent
+        public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+            event.register(
+                    (stack, tintIndex) -> tintIndex == 0 ? GrassColor.getDefaultColor() : -1,
+                    ModBlocks.GRASS_SLAB.get().asItem()
+            );
         }
     }
 }

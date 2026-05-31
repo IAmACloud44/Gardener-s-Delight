@@ -30,9 +30,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.BUTTER_BLOCK)
                 .unlockedBy("has_butter_block", has(ModBlocks.BUTTER_BLOCK)).save(recipeOutput);
 
-        stairBuilder(ModBlocks.DIRT_STAIRS.get(), Ingredient.of(Blocks.DIRT)).group("dirt")
-                .unlockedBy("has_dirt", has(Blocks.DIRT)).save(recipeOutput);
-
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIRT_SLAB.get(), Blocks.DIRT);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COARSE_DIRT_SLAB.get(), Blocks.COARSE_DIRT);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROOTED_DIRT_SLAB.get(), Blocks.ROOTED_DIRT);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRASS_SLAB.get(), Blocks.GRASS_BLOCK);
     }
 }

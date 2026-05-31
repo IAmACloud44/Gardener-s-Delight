@@ -2,8 +2,12 @@
   "item.gardenersdelight.hot_water_bucket": "Hot Water Bucket",
 
   "block.gardenersdelight.butter_block": "Butter Block",
-  "block.gardenersdelight.dirt_slabs": "Dirt Slabs",
-  "block.gardenersdelight.dirt_stairs": "Dirt Stairs",
+
+  "block.gardenersdelight.dirt_slab": "Dirt Slabs",
+  "block.gardenersdelight.coarse_dirt_slab": "Coarse Dirt Slabs",
+  "block.gardenersdelight.rooted_dirt_slab": "Rooted Dirt Slabs",
+  "block.gardenersdelight.grass_slab": "Grass Slabs",
+  "block.gardenersdelight.dirt_path_slab": "Dirt Path Slabs",
 
   "creativetab.gardenersdelight.food": "Gardener's Delight"
 }

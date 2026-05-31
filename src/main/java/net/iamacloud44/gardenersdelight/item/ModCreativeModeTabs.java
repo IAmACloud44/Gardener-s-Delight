@@ -22,7 +22,10 @@ public class ModCreativeModeTabs {
                     .displayItems((ItemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BUTTER_BLOCK);
                         output.accept(ModBlocks.DIRT_SLAB);
-                        output.accept(ModBlocks.DIRT_STAIRS);
+                        output.accept(ModBlocks.COARSE_DIRT_SLAB);
+                        output.accept(ModBlocks.ROOTED_DIRT_SLAB);
+                        output.accept(ModBlocks.GRASS_SLAB);
+                        output.accept(ModBlocks.PATH_SLAB);
 
                         output.accept(ModItem.HOT_WATER_BUCKET);
 

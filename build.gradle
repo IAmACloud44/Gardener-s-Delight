@@ -27,6 +27,25 @@ sourceSets.main.resources {
 }
 
 repositories {
+    mavenLocal()
+
+    maven {
+
+        name = 'curseforge'
+
+        url = 'https://cursemaven.com'
+    }
+
+    maven {
+
+        name = 'modrinth'
+
+        url = 'https://api.modrinth.com/maven'
+    }
+
+    flatDir {
+        dirs 'libs'
+    }
     // Add here additional repositories if required by some of the dependencies below.
 }
 
@@ -118,6 +137,8 @@ configurations {
 }
 
 dependencies {
+    implementation "curse.maven:farmers-delight-398521:6597295"
+    compileOnly "curse.maven:thirst-was-taken-679270:6759289"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
