@@ -21,55 +21,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BUTTER_BLOCK);
 
-        slabBlock(ModBlocks.DIRT_SLAB.get(),
-                blockTexture(Blocks.DIRT),
-                blockTexture(Blocks.DIRT));
-        slabBlock(ModBlocks.COARSE_DIRT_SLAB.get(),
-                blockTexture(Blocks.COARSE_DIRT),
-                blockTexture(Blocks.COARSE_DIRT));
-        slabBlock(ModBlocks.ROOTED_DIRT_SLAB.get(),
-                blockTexture(Blocks.ROOTED_DIRT),
-                blockTexture(Blocks.ROOTED_DIRT));
-
-        grassSlabBlock((SlabBlock) ModBlocks.GRASS_SLAB.get());
-        pathSlabBlock((SlabBlock) ModBlocks.PATH_SLAB.get());
-
-        blockItem(ModBlocks.DIRT_SLAB);
-        blockItem(ModBlocks.COARSE_DIRT_SLAB);
-        blockItem(ModBlocks.ROOTED_DIRT_SLAB);
-        blockItem(ModBlocks.GRASS_SLAB);
-    }
-
-    private void grassSlabBlock(SlabBlock block) {
-        ModelFile bottomModel = models().getExistingFile(
-                ResourceLocation.fromNamespaceAndPath(GardenersDelight.MOD_ID, "block/grass_slab")
-        );
-        ModelFile topModel = models().getExistingFile(
-                ResourceLocation.fromNamespaceAndPath(GardenersDelight.MOD_ID, "block/grass_slab_top")
-        );
-        ModelFile doubleModel = models().getExistingFile(
-                ResourceLocation.fromNamespaceAndPath(GardenersDelight.MOD_ID, "block/grass_slab_double")
-        );
-        getVariantBuilder(block)
-                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).modelForState().modelFile(bottomModel).addModel()
-                .partialState().with(SlabBlock.TYPE, SlabType.TOP)   .modelForState().modelFile(topModel).addModel()
-                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).modelForState().modelFile(doubleModel).addModel();
-    }
-
-    private void pathSlabBlock(SlabBlock block) {
-        ModelFile bottomModel = models().withExistingParent(
-                "dirt_path_slab",
-                ResourceLocation.fromNamespaceAndPath(GardenersDelight.MOD_ID, "block/template_path_slab")
-        );
-        ModelFile topModel = models().withExistingParent(
-                "dirt_path_slab_top",
-                ResourceLocation.fromNamespaceAndPath(GardenersDelight.MOD_ID, "block/template_path_slab_top")
-        );
-
-        getVariantBuilder(block)
-                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).modelForState().modelFile(bottomModel).addModel()
-                .partialState().with(SlabBlock.TYPE, SlabType.TOP)   .modelForState().modelFile(topModel).addModel()
-                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).modelForState().modelFile(bottomModel).addModel();
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

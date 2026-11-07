@@ -15,5 +15,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItem.HOT_WATER_BUCKET.get());
+        basicItem(ModItem.EMPTY_CUP.get());
+        basicItem(ModItem.CAMOMILE_TEA.get());
+        basicItem(ModItem.PINK_TEA.get());
+        basicItem(ModItem.ROSE_TEA.get());
+        basicItem(ModItem.WITHER_ROSE_TEA.get());
+
     }
 }

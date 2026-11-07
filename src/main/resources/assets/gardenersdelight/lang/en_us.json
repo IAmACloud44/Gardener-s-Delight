@@ -1,5 +1,12 @@
 {
+  "creativetab.gardenersdelight.food": "Gardener's Delight",
+
   "item.gardenersdelight.hot_water_bucket": "Hot Water Bucket",
+  "item.gardenersdelight.empty_cup": "Empty Cup",
+  "item.gardenersdelight.camomile_tea": "Camomile Tea",
+  "item.gardenersdelight.pink_tea": "Pink Tea",
+  "item.gardenersdelight.wither_rose_tea": "Wither Rose Tea",
+  "item.gardenersdelight.rose_tea": "Rose Tea",
 
   "block.gardenersdelight.butter_block": "Butter Block",
 
@@ -7,7 +14,6 @@
   "block.gardenersdelight.coarse_dirt_slab": "Coarse Dirt Slabs",
   "block.gardenersdelight.rooted_dirt_slab": "Rooted Dirt Slabs",
   "block.gardenersdelight.grass_slab": "Grass Slabs",
-  "block.gardenersdelight.dirt_path_slab": "Dirt Path Slabs",
+  "block.gardenersdelight.dirt_path_slab": "Dirt Path Slabs"
 
-  "creativetab.gardenersdelight.food": "Gardener's Delight"
 }

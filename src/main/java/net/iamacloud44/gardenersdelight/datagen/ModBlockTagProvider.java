@@ -21,12 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BUTTER_BLOCK.get());
         //SHOVEL
-        tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.DIRT_SLAB.get())
-                .add(ModBlocks.COARSE_DIRT_SLAB.get())
-                .add(ModBlocks.ROOTED_DIRT_SLAB.get())
-                .add(ModBlocks.GRASS_SLAB.get())
-                .add(ModBlocks.PATH_SLAB.get());
+        tag(BlockTags.MINEABLE_WITH_SHOVEL);
+
 
 
         tag(BlockTags.NEEDS_STONE_TOOL)

@@ -22,18 +22,6 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.SLIME_BLOCK)));
 
-
-    public static final DeferredBlock<SlabBlock> DIRT_SLAB = registerBlock("dirt_slab",
-            () -> new GrowableDirtSlabBlock(BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<SlabBlock> COARSE_DIRT_SLAB = registerBlock("coarse_dirt_slab",
-            () -> new DirtSlabBlock(BlockBehaviour.Properties.of().strength(0.65f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<SlabBlock> ROOTED_DIRT_SLAB = registerBlock("rooted_dirt_slab",
-            () -> new DirtSlabBlock(BlockBehaviour.Properties.of().strength(0.65f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<SlabBlock> GRASS_SLAB = registerBlock("grass_slab",
-            () -> new DirtSlabBlock(BlockBehaviour.Properties.of().strength(0.65f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<SlabBlock> PATH_SLAB = registerBlock("dirt_path_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(0.65f).sound(SoundType.GRASS)));
-
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

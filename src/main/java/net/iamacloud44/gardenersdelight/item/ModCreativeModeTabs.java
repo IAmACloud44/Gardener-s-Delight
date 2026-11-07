@@ -21,14 +21,13 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.gardenersdelight.food"))
                     .displayItems((ItemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BUTTER_BLOCK);
-                        output.accept(ModBlocks.DIRT_SLAB);
-                        output.accept(ModBlocks.COARSE_DIRT_SLAB);
-                        output.accept(ModBlocks.ROOTED_DIRT_SLAB);
-                        output.accept(ModBlocks.GRASS_SLAB);
-                        output.accept(ModBlocks.PATH_SLAB);
 
                         output.accept(ModItem.HOT_WATER_BUCKET);
-
+                        output.accept(ModItem.EMPTY_CUP);
+                        output.accept(ModItem.CAMOMILE_TEA);
+                        output.accept(ModItem.PINK_TEA);
+                        output.accept(ModItem.ROSE_TEA);
+                        output.accept(ModItem.WITHER_ROSE_TEA);
                     }).build());
 
     public static void register(IEventBus eventBus) {
