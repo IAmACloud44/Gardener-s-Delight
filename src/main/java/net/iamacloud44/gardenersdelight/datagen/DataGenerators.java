@@ -1,6 +1,10 @@
 package net.iamacloud44.gardenersdelight.datagen;
 
 import net.iamacloud44.gardenersdelight.GardenersDelight;
+import net.iamacloud44.gardenersdelight.datagen.client.ModBlockStateProvider;
+import net.iamacloud44.gardenersdelight.datagen.client.ModItemModelProvider;
+import net.iamacloud44.gardenersdelight.datagen.server.tags.ModBlockTagProvider;
+import net.iamacloud44.gardenersdelight.datagen.server.tags.ModItemTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

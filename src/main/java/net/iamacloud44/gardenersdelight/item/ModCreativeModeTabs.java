@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.gardenersdelight.food"))
                     .displayItems((ItemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BUTTER_BLOCK);
+                        output.accept(ModBlocks.CLOVER_PETALS);
 
                         output.accept(ModItem.HOT_WATER_BUCKET);
                         output.accept(ModItem.EMPTY_CUP);
@@ -28,6 +29,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItem.PINK_TEA);
                         output.accept(ModItem.ROSE_TEA);
                         output.accept(ModItem.WITHER_ROSE_TEA);
+                        output.accept(ModItem.CLOVER_TEA);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,4 +1,4 @@
-package net.iamacloud44.gardenersdelight.datagen.recipe;
+package net.iamacloud44.gardenersdelight.datagen.server.recipe;
 
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;

@@ -1,8 +1,7 @@
 package net.iamacloud44.gardenersdelight.datagen;
 
-import net.iamacloud44.gardenersdelight.datagen.recipe.CookingRecipes;
-import net.iamacloud44.gardenersdelight.datagen.recipe.CraftingRecipes;
-import net.iamacloud44.gardenersdelight.datagen.recipe.CuttingRecipes;
+import net.iamacloud44.gardenersdelight.datagen.server.recipe.CookingRecipes;
+import net.iamacloud44.gardenersdelight.datagen.server.recipe.CraftingRecipes;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

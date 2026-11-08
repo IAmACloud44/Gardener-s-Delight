@@ -18,6 +18,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.CLOVER_PETALS.get());
         dropSelf(ModBlocks.BUTTER_BLOCK.get());
         add(ModBlocks.BUTTER_BLOCK.get(),
                 block -> createSingleItemTable(Items.GOLD_INGOT));

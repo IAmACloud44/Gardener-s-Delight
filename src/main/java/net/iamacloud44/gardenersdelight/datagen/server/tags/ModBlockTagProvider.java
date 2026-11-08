@@ -1,4 +1,4 @@
-package net.iamacloud44.gardenersdelight.datagen;
+package net.iamacloud44.gardenersdelight.datagen.server.tags;
 
 import net.iamacloud44.gardenersdelight.GardenersDelight;
 import net.iamacloud44.gardenersdelight.block.ModBlocks;

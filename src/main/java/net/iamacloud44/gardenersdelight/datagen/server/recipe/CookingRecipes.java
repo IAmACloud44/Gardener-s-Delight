@@ -1,5 +1,6 @@
-package net.iamacloud44.gardenersdelight.datagen.recipe;
+package net.iamacloud44.gardenersdelight.datagen.server.recipe;
 
+import net.iamacloud44.gardenersdelight.block.ModBlocks;
 import net.iamacloud44.gardenersdelight.item.ModItem;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.Items;
@@ -47,6 +48,13 @@ public class CookingRecipes {
                 .addIngredient(ModItem.HOT_WATER_BUCKET)
                 .addIngredient(Items.OXEYE_DAISY)
                 .unlockedByItems("has_daisy", Items.OXEYE_DAISY)
+                .setRecipeBookTab(CookingPotRecipeBookTab.DRINKS)
+                .save(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItem.CLOVER_TEA.get(), 1, FAST_COOKING, SMALL_EXP, ModItem.EMPTY_CUP.get())
+                .addIngredient(ModItem.HOT_WATER_BUCKET)
+                .addIngredient(ModBlocks.CLOVER_PETALS)
+                .unlockedByItems("has_clover", ModBlocks.CLOVER_PETALS)
                 .setRecipeBookTab(CookingPotRecipeBookTab.DRINKS)
                 .save(output);
     }

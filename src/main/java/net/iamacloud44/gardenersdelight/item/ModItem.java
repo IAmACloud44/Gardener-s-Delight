@@ -13,7 +13,7 @@ public class ModItem {
 
     //ITEMS
     public static final DeferredItem<Item> EMPTY_CUP = ITEMS.register("empty_cup",
-            () -> new Item(new Item.Properties().stacksTo(16)));
+            () -> new Item(new Item.Properties()));
 
     //single food items
     public static final DeferredItem<Item> HOT_WATER_BUCKET = ITEMS.register("hot_water_bucket",
@@ -28,6 +28,8 @@ public class ModItem {
             () -> new Item(new Item.Properties().food(ModFoodProperties.ROSE_TEA).stacksTo(16)));
     public static final DeferredItem<Item> WITHER_ROSE_TEA = ITEMS.register("wither_rose_tea",
             () -> new Item(new Item.Properties().food(ModFoodProperties.WITHER_ROSE_TEA).stacksTo(16)));
+    public static final DeferredItem<Item> CLOVER_TEA = ITEMS.register("clover_tea",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CLOVER_TEA).stacksTo(16)));
 
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);
